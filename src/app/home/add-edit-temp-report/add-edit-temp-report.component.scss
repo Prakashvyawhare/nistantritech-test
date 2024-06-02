@@ -1,0 +1,28 @@
+.form-card{
+    padding: 20px;
+    margin: 20px 10px;
+    height: 100vh;
+    display: list-item;
+    /* width: 100%; */
+    background-color: #dde1e1;
+    .form-container{
+        display: flex;
+        flex-direction: row;
+        padding: 10px 0;
+        align-items: center;
+        align-content: center;
+        justify-content: flex-start;
+         mat-form-field{
+padding: 0px 20px;
+        }
+    }
+    button{
+        margin: 5px;
+    }
+    mat-card-title{
+        margin-bottom: 16px;
+    }
+}
+.list-card{
+    height: auto;
+}

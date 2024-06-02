@@ -1,0 +1,43 @@
+<div>
+    <div class="form-card">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>Temperature Report Form</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <form  [formGroup]="tempForm" (submit)="onSubmit()">
+                    <div class="form-container">
+                        <div class="form-field">
+                            <mat-form-field appearance="fill">
+                                <mat-label>Select a date</mat-label>
+                                <input matInput [matDatepicker]="picker" placeholder="MM/DD/YYYY" formControlName="date" >
+
+                                <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                                <mat-error *ngIf="tempForm.get('date')?.getError('required')">Date is required.</mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div>
+                            <mat-form-field appearance="fill">
+                                <mat-label>Enter Temperature</mat-label>
+                                <input matInput type="number" formControlName="temperature" placeholder="Temperature in degrees Celsius">
+                                <mat-icon matSuffix>device_thermostat</mat-icon>
+                                <mat-error *ngIf="tempForm.get('temperature')?.getError('required')">Temperature is required.</mat-error>
+                                <mat-error *ngIf="tempForm.get('temperature')?.getError('min')">Temperature should be between -50 &deg;C and 50 &deg;C.</mat-error>
+                                <mat-error *ngIf="tempForm.get('temperature')?.getError('max')">Temperature should be between -50 &deg;C and 50 &deg;C.</mat-error>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </form>
+
+            </mat-card-content>
+            <mat-card-actions align="end">
+                <button mat-raised-button color="primary">Save</button>
+                <button mat-raised-button>Cancel</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+    <div class="list-card">
+
+    </div>
+</div>
