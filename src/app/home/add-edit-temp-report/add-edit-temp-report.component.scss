@@ -1,10 +1,18 @@
-.form-card{
+.main-body-container{
     padding: 20px;
     margin: 20px 10px;
     height: 100vh;
     display: list-item;
     /* width: 100%; */
     background-color: #dde1e1;
+}
+.form-card{
+    // padding: 20px;
+    margin: 20px 10px;
+    height: 230px;
+    // display: list-item;
+    // /* width: 100%; */
+    // background-color: #dde1e1;
     .form-container{
         display: flex;
         flex-direction: row;
@@ -24,5 +32,7 @@ padding: 0px 20px;
     }
 }
 .list-card{
-    height: auto;
+    height: 250px;
+    margin: 0px 5px;
+    overflow: auto;
 }

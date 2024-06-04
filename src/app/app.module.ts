@@ -22,7 +22,8 @@ import { MatNativeDateModule } from '@angular/material/core';
 import {MatCardModule} from '@angular/material/card';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 
@@ -51,7 +52,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatDatepickerModule,
     MatNativeDateModule,
     MatCardModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule,
+    MatExpansionModule
     
   ],
   providers: [],
